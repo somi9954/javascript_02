@@ -28,3 +28,7 @@ hamburger.addEventListener("click", () => {
   upbar.classList.toggle("upbarX");
   downbar.classList.toggle("downbarX");
 });
+
+window.addEventListener("wheel", (e) => {
+  console.log(e.deltaY);
+});
