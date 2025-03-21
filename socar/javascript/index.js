@@ -23,6 +23,7 @@ window.addEventListener("scroll", () => {
 });
 
 const hamburger = document.querySelector(".hamburger");
+``;
 
 hamburger.addEventListener("click", () => {
   upbar.classList.toggle("upbarX");
@@ -30,5 +31,12 @@ hamburger.addEventListener("click", () => {
 });
 
 window.addEventListener("wheel", (e) => {
-  console.log(e.deltaY);
+  const { deltY } = e;
+  if (deltY > 0) {
+    header.classList.add("onHidden");
+    header.classList.remove("onShow");
+  } else {
+    header.classList.add("onshow");
+    header.classList.remove("onHidden");
+  }
 });
